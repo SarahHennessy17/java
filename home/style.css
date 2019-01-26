@@ -29,7 +29,8 @@ body {
 h1 {
 	letter-spacing: 1vw;
 	font-size: 7vh;
-	-webkit-text-stroke-width: .01vw;
+	-webkit-text-stroke-width: .2vh;
+	-webkit-text-stroke-color: 	#FFFF00;
 	font-family: 'Russo One', sans-serif;
 }
 
@@ -50,7 +51,7 @@ p {
 
 a {
 	color: black;
-	-webkit-text-stroke-width: .07vw;
+	-webkit-text-stroke-width: .07vh;
 	-webkit-text-stroke-color: 	#FFFF00;
 	text-decoration: none;
 }
