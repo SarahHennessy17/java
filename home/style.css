@@ -5,12 +5,22 @@ body {
 	color: white;
 	padding-left: 5%;
 	font-family: 'Montserrat', sans-serif;
-	overflow: hidden;
+	/*overflow: hidden;*/
 }
 
 /*.hide {
 	display: none;
 }*/
+
+img {
+	min-width: 100vw;
+	height: 100vh;
+	opacity: .5;
+	position: fixed;
+	top: 0vw;
+	right: 0vw;
+	z-index: 1;
+}
 
 .bio {
 	position: relative;
@@ -18,15 +28,20 @@ body {
 	opacity: 0;
 	transition: 2s;
 	float: left;
+	z-index: 100;
 }
 	
 .half {
+	position: relative;
 	float: left;
 	top: 0;
 	margin-right: 9vw;
+	z-index: 100;
 }
 
 h1 {
+	position: relative;
+	z-index: 100;
 	letter-spacing: 1vw;
 	font-size: 7vh;
 	-webkit-text-stroke-width: .2vh;
@@ -35,6 +50,8 @@ h1 {
 }
 
 h2 {
+	position: relative;
+	z-index: 100;
 	text-transform: uppercase;
 	letter-spacing: 1vw;
 	font-size: 3vh;
