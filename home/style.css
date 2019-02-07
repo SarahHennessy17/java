@@ -42,8 +42,8 @@ body {
 .preview {
 	width: 30vw;
 	opacity: 0;
-	position: relative;
-	right: 50vw;
+	position: fixed;
+	right: 15vw;
 	z-index: 100;	
 	border: solid white .1vw;
 	transition: 1s;
