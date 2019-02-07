@@ -1,0 +1,85 @@
+body {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: black;
+	font-size: 7vh;
+	text-align: center;
+	font-family: helvetica;
+}
+
+/*BODY OF CALC*/
+#calculator {
+	height: 75vh;
+	width: 55vh;
+	border-radius: 5%;
+	margin: auto;
+	margin-top: 12.5vh;
+	background-color: #8059FF;
+}
+
+/*WINDOW WHERE THE ANSWER APPEARS*/
+#display {
+	width: 55vh;
+	height: 15vh;
+	border-radius: 15px 15px 0px 0px;
+	background-color: black;
+	border: white solid .5px;
+	color: white;
+	margin-bottom: 2vh;
+}
+
+/* THE ANSWER/PROBLEM */
+p {
+	position: relative;
+	top: -9vh;
+	text-align: right;
+	margin-right: 2vh;
+	font-size: 10vh;
+}
+
+/*ALL BUTTONS*/
+.button {
+	width: 12.5vh;
+	height: 10vh;
+	background-color: rgba(255, 255, 255, 0.5);
+	margin-left: 1vh;
+	margin-top: 1vh;
+	float: left;
+	box-shadow: 0px 0px 10px grey;
+	color: white;
+}
+
+/* JUST THE EQUAL BUTTON*/
+.equal {
+	width: 53vh;
+	height: 10vh;
+	margin: 1vh;
+	float: left;
+}
+
+/*None of those ugly defualt button looks*/
+button {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+/*HOVER BUTTONS*/
+
+.button:hover {
+	box-shadow: 0px 0px 10px white;
+}
+
+/*PRESS BUTTONS*/
+
+.button:active {
+	background-color: #4C2CB2;
+	box-shadow: 0px 0px 10px black;
+}
+
+
