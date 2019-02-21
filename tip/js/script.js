@@ -2,32 +2,28 @@ $( document).ready(function(){
 
 	var peopleCounter = 2;
 	var emojiCounter = 2;
-	var emojiMood = ["emojis/cry.png","emojis/laugh.png","emojis/gross.png","emojis/fear.png","emojis/sleep.png","emojis/love.png","emojis/adventure.png","emojis/think.png","emojis/big.png","emojis/dark.png","emojis/family.png","emojis/alien.png","emojis/lick.png","emojis/cool.png","emojis/cold.png"];
-
-// Give the people Faces
-function faceOff(){
-
-var url = emojiMood[peopleCounter];
-
-		$(".face").attr("src", url);
-		
-
-}
+	var emojiMood = ["emojis/lick.png","emojis/love.png","emojis/laugh.png","emojis/cry.png","emojis/gross.png","emojis/fear.png","emojis/sleep.png","emojis/adventure.png","emojis/think.png","emojis/big.png","emojis/dark.png","emojis/family.png","emojis/alien.png","emojis/cool.png","emojis/cold.png"];
+	const emojiLength = emojiMood.length;
 
 //Whenever we click + attach more people
 $('#add').click(function(){ 
 	//pick a Face
-	var url = emojiMood[peopleCounter];  
+	var url = emojiMood[emojiCounter];  
  	//attach more people
 	$('#people').append("<img src=" + url + " class='face'>");	
+	//Scroll with emojis
+   	$(document).scrollTop($(document).height());
 	//Now you can remove people
 	$('#minus').removeClass("hide");
 	//And Add to our people count
 	peopleCounter++;
 	emojiCounter++;
-	// if(emojiCounter > emojiMood.length){
-	// 	emojiCounter = 0;
-	// }
+	//Tell us how many people we've got
+	$('#party').html("Party Size: " + peopleCounter)
+	//reset our face count when we run out of faces
+	if(emojiCounter > emojiLength - 1){
+		emojiCounter = 0;
+	}
 })
 
 //Whenever we click - remove people
@@ -38,6 +34,8 @@ $('#minus').click(function(){
 	//And Subtract from our people count
 	peopleCounter--;
 	emojiCounter--;
+	//Tell us how many people we've got
+	$('#party').html("Party Size: " + peopleCounter)
 	//If you only have two people you can't delete any
 	if(peopleCounter == 2){
 		$('#minus').addClass("hide");
@@ -45,14 +43,12 @@ $('#minus').click(function(){
 })
 
 //When we click bill we finalize people count
-$('#bill').click(function(){     
+$('#party').click(function(){     
 	//No more adding people
-	$('#add').addClass("hide");	    
-	//No more adding people
-	$('#bill').addClass("hide");	
+	$('#add').addClass("hide");		
 	//No more remove people
 	$('#minus').addClass("hide");
-	//No more remove people
+	//No more changing party size
 	$('#party').addClass("hide");
 	//THE PRICE INPUT
 	$('#input').removeClass("hide");
@@ -60,39 +56,37 @@ $('#bill').click(function(){
 
 //Suggest a Tip
 $('#suggestTip').click(function(){ 
-
 	//Get the Bill Price
 	var billPrice = $('#billPrice').val();
-
 	//calculate the tip
-	var tip = billPrice * .15;
-
+	var tip = billPrice * .18;
+	// Round Tip
+	var totalTip = Math.round(tip);
 	//Show Tip Section
 	$('#tip').removeClass("hide");
-
 	//suggest the tip
-	$('#tipPrice').val(tip)
+	$('#tipPrice').val(totalTip)
+	//Make room for the tip
+	$("#bill").css("height", "15vh");
 })
 
 //When we click bill we finalize people count
 $('#splitIt').click(function(){ 
-
 	//Show Total
 	$('.total').removeClass("hide");
-
 	//Get the Bill + tip Price
 	var billPrice = Number($('#billPrice').val());
 	var tipPrice = Number($('#tipPrice').val());
-
 	//Calculate the Bill + tip Price
 	var total = billPrice + tipPrice;
-
 	//Calculate the Bill + tip Price each
-	var totalEach = total/peopleCounter;
-	Math.round(totalEach);
-
+	var totalCalc = total/peopleCounter;
+	// Round Number Total
+	var totalEach = Math.round(totalCalc);
+	//Make room for total
+	$("#bill").css("height", "22vh");
 	//Tell us about it
-	$('.total').text("Everybody Pay: " + totalEach)
+	$('.total').text("Everybody Pay: $" + totalEach)
 	
 })
 

@@ -1,133 +1,205 @@
 body {
 	margin: 0;
 	padding: 0;
-	/*overflow: hidden;*/
+	overflow: hidden;
+	background-color: #fffdee;
+	font-family: 'Josefin Sans', sans-serif;
+  	-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
 }
 
-p {
-	position: fixed;
-	color: black;
-	top: 10vh;
-	font-size: 4vw;
-	width: 100vw;
-	text-align: center;
-	z-index: 100;
-}
+/*
+colors {
+	background-color: #fffdee;
+	yellow: #ffca4a;
+	green: #9dbc78;
+	blue: #5381b2;
+	red: #ed623b;
+	black: #150f13;
+}*/
 
+/*hide things*/
 .hide {
 	display: none;
 }
 
+/*button*/
+button {
+	background: none;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+	color: #9dbc78;
+	-webkit-appearance: none;
+    -moz-appearance: none;
+	text-shadow: #150f13 -.1vw .1vw;
+}
+
+/*button*/
+input {
+	background: none;
+	width: 12vw;
+	height: 4.75vh;
+	border: #fffdee solid .2vh;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+	-webkit-appearance: none;
+    -moz-appearance: none;
+    text-align: right;
+	color: #9dbc78;
+	text-shadow: #150f13 -.1vw .1vw;
+}
+
+input[type=text]:focus {
+    border-color: #ffca4a;
+}
+
+/* Top Menu - Split the Bill */
 #menu {
 	position: fixed;
 	width: 100vw;
-	height: 7vh;
-	background-color: blue;
-	color: white;
+	height: 6vh;
+	background-color: #5381b2;
 	font-size: 5vh;
 	text-align: center;
 	margin-bottom: 5vh;
 	z-index: 100;
-	padding-top: 1vh;
+	padding-top: 2vh;
+	text-transform: uppercase;
+	color: #ffca4a;
+	text-shadow: #150f13 -.1vw .1vw;
 }
 
+/* Party Size Text */
+#party {
+	position: relative;
+	top: -4.5vh;
+	font-size: 5vh;
+	width: 100vw;
+	text-align: center;
+	z-index: 105;
+	color: #9dbc78;
+	text-shadow: #150f13 -.1vw .1vw;
+}
+
+/* Party Size Text on hover */
+#party:hover {
+	color: #ffca4a;
+}
+
+/* Emoji Container */
 #people{
 	z-index: 0;
-	margin-left: 5vw;
+	margin-left: 12vw;
+	margin-right: 8vw;
 	position: relative;
 	top: 18vh;
 }
 
+/* Emojis */
 .face {
-	width: 12vw;
-	height: 12vw;
-	background-color: red;
+	width: 22vh;
+	height: 22vh;
+	/*background-color: red;*/
 	top: 5vw;
 	position: relative;
 	float: left;
-	margin-left: 5vw;
+	margin-left: 6vh;
 	margin-bottom: 5vw;
 }
 
+/* + */
 #add {
 	z-index: 100;
 	position: fixed;
 	font-size: 10vh;
 	top: 50vh;
 	right: 5vw;
-
+	color: #ed623b;
 }
 
+#add:hover {
+	color: #cf5533;
+}
+
+#add:active {
+	color: #ed623b;
+	text-shadow: #150f13 -.1vw .1vw;
+}
+
+/* - */
 #minus {
 	z-index: 100;
 	position: fixed;
 	font-size: 10vh;
 	top: 50vh;
 	left: 5vw;
+	color: #ed623b;
 }
 
+#minus:hover {
+	color: #cf5533;
+}
+
+#minus:active {
+	color: #ed623b;
+	text-shadow: #150f13 -.1vw .1vw;
+}
+
+/*Button that finalizes people count + reveals bill price input*/
 #bill {
-	background-color: yellow;
-	width: 6vh;
-	height: 6vh;
 	position: fixed;
-	top: 1vh;
-	right: 1vw;
-}
-
-#bill:hover {
-	background-color: white;
+	bottom: 0;
+	width: 100vw;
+	height: 7vh;
+	padding-top: .5vh;
+	background-color: #5381b2;
+	font-size: 5vh;
+	text-align: center;
+	z-index: 100;
+	color: #9dbc78;
+	text-shadow: #150f13 -.1vw .1vw;
 }
 
 #bill:active {
-	background-color: blue;
+	background-color: #44688e;
 }
 
+/* BILL PRICE */
 #input {
-	position: fixed;
-	color: black;
-	top: 15vh;
-	font-size: 4vw;
+	position: relative;
+	margin-top: 1vh;
+	margin-bottom: 2vh;
 	width: 100vw;
 	text-align: center;
 	z-index: 100;
 }
 
+/* TIP */
 #tip {
-	position: fixed;
-	color: black;
-	top: 75vh;
-	font-size: 4vw;
+	position: relative;
+	margin-bottom: 2vh;
 	width: 100vw;
 	text-align: center;
 	z-index: 100;
 }
 
-
-
+/* TOTAL */
 .total {
-	position: fixed;
-	color: black;
-	top: 50vh;
-	font-size: 4vw;
+	position: relative;
+	margin-bottom: 2vh;
 	width: 100vw;
 	text-align: center;
 	z-index: 100;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
