@@ -1,0 +1,142 @@
+body {
+	margin: 0;
+	padding: 0;
+	/*overflow: hidden;*/
+}
+
+p {
+	position: fixed;
+	color: black;
+	top: 10vh;
+	font-size: 4vw;
+	width: 100vw;
+	text-align: center;
+	z-index: 100;
+}
+
+.hide {
+	display: none;
+}
+
+#menu {
+	position: fixed;
+	width: 100vw;
+	height: 7vh;
+	background-color: blue;
+	color: white;
+	font-size: 5vh;
+	text-align: center;
+	margin-bottom: 5vh;
+	z-index: 100;
+	padding-top: 1vh;
+}
+
+#people{
+	z-index: 0;
+	margin-left: 5vw;
+	position: relative;
+	top: 18vh;
+}
+
+.face {
+	width: 12vw;
+	height: 12vw;
+	background-color: red;
+	top: 5vw;
+	position: relative;
+	float: left;
+	margin-left: 5vw;
+	margin-bottom: 5vw;
+}
+
+#add {
+	z-index: 100;
+	position: fixed;
+	font-size: 10vh;
+	top: 50vh;
+	right: 5vw;
+
+}
+
+#minus {
+	z-index: 100;
+	position: fixed;
+	font-size: 10vh;
+	top: 50vh;
+	left: 5vw;
+}
+
+#bill {
+	background-color: yellow;
+	width: 6vh;
+	height: 6vh;
+	position: fixed;
+	top: 1vh;
+	right: 1vw;
+}
+
+#bill:hover {
+	background-color: white;
+}
+
+#bill:active {
+	background-color: blue;
+}
+
+#input {
+	position: fixed;
+	color: black;
+	top: 15vh;
+	font-size: 4vw;
+	width: 100vw;
+	text-align: center;
+	z-index: 100;
+}
+
+#tip {
+	position: fixed;
+	color: black;
+	top: 75vh;
+	font-size: 4vw;
+	width: 100vw;
+	text-align: center;
+	z-index: 100;
+}
+
+
+
+.total {
+	position: fixed;
+	color: black;
+	top: 50vh;
+	font-size: 4vw;
+	width: 100vw;
+	text-align: center;
+	z-index: 100;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
