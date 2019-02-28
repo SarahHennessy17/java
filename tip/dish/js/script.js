@@ -137,6 +137,14 @@ function splitTime(){
 	//how much does everyone need to add to their total
 	$('.total').val(splitIt);
 	$('.total').text("Everybody add $" + splitIt + " to your total");
+
+	var thisAmount = 0;
+    $(".myPrice").each(function(){
+        thisAmount += +$(this).val();
+        $(this).val(thisAmount + splitIt);
+        console.log(thisAmount + splitIt);
+    });
+
 }
 
 //Calculate the equation when we press the keyboard
