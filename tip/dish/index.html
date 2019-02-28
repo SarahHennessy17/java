@@ -9,14 +9,7 @@
 </head>
 <body>
 
-	<div id=option>
-		<p class="split">Split Evenly</p>or <br>
-		<p><a href="dish/index.html" class="dish">Based on Dish?</a></p>
-	</div>
-
-	<div class="back"></div>
-
-<div id="menu"><a href="index.html">Split the Bill</a></div>
+<div id="menu"><a href="../index.html">Split the Bill</a></div>
 
 <div id="add">+</div>
 <div id="minus" class="hide">-</div>
@@ -24,25 +17,27 @@
 <div id="people">
 	<!-- <div class="person"></div>
 	<div class="person"></div> -->
-	<img src="emojis/lick.png" class="face">
-		<input type="text" class="myPrice hide">
-        <button class="addMore hide">+</button>
-	<img src="emojis/love.png" class="face">
-		<input type="text" class="myPrice hide">
-        <button class="addMore hide">+</button>
+	<img src="../emojis/lick.png" class="face">
+		<input type="text" class="myPrice hide" placeholder="$">
+        <button class="addMore hide none">+</button>
+	<img src="../emojis/love.png" class="face">
+		<input type="text" class="myPrice hide" placeholder="$">
+        <button class="addMore hide none">+</button>
 </div>
 
 <div id="bill">
 
 	<p id="party">Party Size: 2</p>
 
+	<div id="prices" class="none">Add a Tip</div>
+
 	<div id="input" class="hide">
-        Bill Price: $<input type="text" id="billPrice">
+        Tax: $<input type="text" id="taxPrice">
         <button id="suggestTip">+</button>
 	</div>
 
 	<div id="tip" class="hide">
-        Tip: $ <input type="text" id="tipPrice">
+        Tip: $<input type="text" id="tipPrice">
         <button id="splitIt">=</button>
 	</div>
 

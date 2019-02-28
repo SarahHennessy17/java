@@ -33,6 +33,11 @@ colors {
 
 /*hide things*/
 .hide {
+	opacity: 0;
+}
+
+/*hide things*/
+.none {
 	display: none;
 }
 
@@ -94,7 +99,7 @@ input[type=text]:focus {
 	right: 0;
 	width: 100vw;
 	height: 100vh;
-	background-color: #fffdee;
+	background-color: white;
 	opacity: .5;
 	z-index: 999;
 }
@@ -105,12 +110,12 @@ input[type=text]:focus {
 }
 
 .split:hover {
-	color: #9dbc78;
+	color: #150f13;
 }
 
 /* SPLIT BASED ON DISH PRICE */
 .dish:hover {
-	color: #9dbc78;
+	color: #150f13;
 }
 
 /* Top Menu - Split the Bill */
@@ -122,7 +127,7 @@ input[type=text]:focus {
 	font-size: 5vh;
 	text-align: center;
 	margin-bottom: 5vh;
-	z-index: 2000;
+	z-index: 100;
 	padding-top: 2vh;
 	text-transform: uppercase;
 	color: #ffca4a;
@@ -132,6 +137,7 @@ input[type=text]:focus {
 /* Party Size Text */
 #party {
 	position: relative;
+	z-index: 103;
 	top: -4.5vh;
 	font-size: 5vh;
 	width: 100vw;
@@ -143,11 +149,12 @@ input[type=text]:focus {
 
 /* Party Size Text on hover */
 #party:hover {
-	color:#9dbc78;
+	color: #9dbc78;
 }
 
 /* Emoji Container */
 #people{
+	scroll-behavior: auto;
 	z-index: 0;
 	margin-left: 12vw;
 	margin-right: 8vw;
@@ -225,13 +232,20 @@ input[type=text]:focus {
 }
 
 /* BILL PRICE */
-#input {
+#input, #prices {
+	color: #9dbc78;
 	position: relative;
+	bottom: .5vh;
 	margin-top: 1vh;
 	margin-bottom: 2vh;
 	width: 100vw;
 	text-align: center;
-	z-index: 100;
+	z-index: 102;
+}
+
+/* BILL PRICE */
+#input:hover, #prices:hover, #tip:hover, #total:hover {
+	color: #ffca4a;
 }
 
 /* TIP */
@@ -240,7 +254,7 @@ input[type=text]:focus {
 	margin-bottom: 2vh;
 	width: 100vw;
 	text-align: center;
-	z-index: 100;
+	z-index: 101;
 }
 
 /* TOTAL */
@@ -280,8 +294,21 @@ input[type=text]:focus {
 	position: relative;
 	margin: 0;	
 	padding: 0;
-	background-color: red;
 }
+
+.addMore:hover {
+	color: #5381b2;
+}
+
+.addMore:active {
+	color: #ed623b;
+}
+
+.bonus{
+	margin-top: 6vh;
+	left: -10vw;
+}
+
 
 
 
