@@ -104,10 +104,13 @@ function getTax(){
 }
 
 function tipGive(){
+	//Get our bill
+	var billPrice = 0;
+    $(".myPrice").each(function(){
+        billPrice += +$(this).val();
+    });
 	//Get the tax
 	var taxAmount = Number($('#taxPrice').val());
-	//Get the total
-	var billPrice = Number($('.myPrice').val());
 	//add tax and tip
 	var ourTotal = billPrice + taxAmount;
 	//calculate the tip
@@ -134,15 +137,18 @@ function splitTime(){
 	var splitAmount = tipPrice + taxPrice;
 	var splitIt = splitAmount/peopleCounter;
 
-	//how much does everyone need to add to their total
-	$('.total').val(splitIt);
-	$('.total').text("Everybody add $" + splitIt + " to your total");
+	var totalAmount = splitIt.toFixed(2);
 
-	var thisAmount = 0;
+
+	//how much does everyone need to add to their total
+	$('.total').val(totalAmount);
+	$('.total').text("Everybody add $" + totalAmount + " to your total");
+
     $(".myPrice").each(function(){
-        thisAmount += +$(this).val();
-        $(this).val(thisAmount + splitIt);
-        console.log(thisAmount + splitIt);
+    	var thisAmount = 0;
+        thisAmount = Number($(this).val());
+        $(this).val(thisAmount + totalAmount);
+        console.log(thisAmount + totalAmount);
     });
 
 }

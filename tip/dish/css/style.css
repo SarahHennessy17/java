@@ -270,7 +270,7 @@ input[type=text]:focus {
 
 /* Input boxes for price */
 .myPrice {
-	width: 7vh;
+	width: 10vh;
 	position: relative;
 	text-align: center;
 	z-index: 101;
