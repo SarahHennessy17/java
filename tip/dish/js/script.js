@@ -136,9 +136,8 @@ function splitTime(){
 	//Split the tax/tip
 	var splitAmount = tipPrice + taxPrice;
 	var splitIt = splitAmount/peopleCounter;
-
-	var totalAmount = splitIt.toFixed(2);
-
+	var totalAmount = Number(splitIt);
+	// var totalAmount = splitIt.toFixed(2);
 
 	//how much does everyone need to add to their total
 	$('.total').val(totalAmount);
