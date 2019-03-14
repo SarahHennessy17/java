@@ -1,0 +1,98 @@
+body {
+	margin:0px;
+	height: 100%;
+	overflow: hidden;
+	background-color: rgb(0, 35, 8);
+	color: white;
+}
+
+#container {
+	margin: 0;
+}
+
+#screensaver {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+	background-image: none;
+	transition: .5s ease;
+	background-color: transparent;
+	z-index: 100;
+}
+
+#about {
+	position: fixed;
+	width: 60%;
+	height: 55%;
+	display: block;
+	vertical-align: middle;
+	margin: 1%;
+	background-color: rgb(227, 247, 227);
+	position: absolute;
+	top: 20%;
+	left: 20%;
+	z-index: 1;
+	font-size: 90%;
+}
+
+p {
+	margin: 2%;
+	color: green;
+	font-size: 2vw;
+}
+
+a {
+	text-decoration: none;
+	color: green;
+	cursor: none;
+}
+
+#ticker {
+	position:absolute;
+	bottom: 2%;
+	margin: 2%;
+	z-index: 100;
+	font-size: 3vw;
+	color: white;
+}
+
+.dots {
+	position: fixed;
+	bottom: 2vh;
+	right: 45vw;
+	float: bottom;
+	z-index: 300;
+}
+
+.menu {
+	width: 1.75vw;
+	height: 1.75vw;
+	margin: .55vw;
+	background-color: white;
+	border-radius: 50%;
+	text-align: center;
+	float: right;
+	opacity: .5;
+}
+
+.menu:hover {
+	opacity: .75;
+}
+
+.menu:active {
+	opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
