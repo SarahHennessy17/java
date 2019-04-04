@@ -1,0 +1,47 @@
+body {
+	width: 100vw;
+  	height: 100vh;
+	margin: 0;
+	padding: 0;
+	font-family: 'News Cycle', sans-serif;
+	font-weight: 400;
+	background-image: url("../img/stars.png");
+	background-color: black;
+ 	overflow: hidden;
+	color: #feda4a;
+ }
+
+.text, .title, .number {
+	position: relative;
+	top: -300vh;
+	text-align: justify;
+	margin-left: 15vw;
+	font-size: 7vw;
+	max-width: 70vw;
+}
+
+
+.crawl {
+  position: relative;
+  /*transform-origin: 50% 100%;*/
+  animation: crawl 60s linear;
+}
+
+@keyframes crawl {
+    0% {
+    top: 90vh;
+    transform: perspective(0em) rotateX(0deg);
+  }
+    100% { 
+    top: -400vh;
+  	transform: perspective(70em) rotateX(50deg);
+  }
+}
+
+
+
+
+
+
+
+
