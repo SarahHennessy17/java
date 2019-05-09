@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Diversity On Deck</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+			<script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+        <script type="text/javascript" src="js/cards.js"></script>
+        <script type="text/javascript" src="js/teamDemo.js"></script>
+        <script type="text/javascript" src="js/cityDemo.js"></script>
+</head>
+<body>
+
+<!-- ALL OF THE TEAMS -->
+<div id="select">
+	<!-- HEADER FOR ALL TEAMS SELECTION -->
+	<div class="head"><h1 class="select">SELECT MLB TEAM</h1></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+</div>
+
+<!-- The div that wraps the card front and back -->
+<div id="card">
+	<!-- THE SPECIFIC TEAM CARD FRONT -->
+	<div class="frontcard">
+			<div class="stats">
+
+				<div id="caucasian">
+					<p class="c_percent">50%</p>
+					<p class="c_tag">Caucasian</p>
+				</div>
+				<div id="african">
+					<p class="aa_percent">10%</p>
+					<p class="aa_tag">African American</p>
+				</div>
+				<div id="latino">
+					<p class="l_percent">30%</p>
+					<p class="l_tag">Latino</p>
+				</div>
+				<div id="asian">
+					<p class="a_percent">5%</p>
+					<p class="a_tag">Asian</p>
+				</div>
+				<div id="other">
+					<p class="o_percent">5%</p>
+					<p class="o_tag">Other</p>
+				</div>
+
+			</div>
+			<div class="front"><img src="img/yankees.png" class="smallLogo"></div>
+			<p class="teamName">New York Yankees</p>
+			<p class="details">Founded 1903<br> World Series Titles 27</p>		
+			<p class="compare">+</p>
+	</div>
+	<!-- THE SPECIFIC TEAM CARD BACK W/DETAILS-->
+	<div class="back">
+	<div class="backcard">
+			<img src="img/yankees.png" class="medLogo">
+			<p class="nameback">New York Yankees</p>
+			<div class="teamstats">
+
+				<div class="line"></div>
+				<p class="statcat">Player Demographics</p>
+					<p class="statlabel">Caucasian</p><p id="caucasianPlayers">20</p>
+					<p class="statlabel">African American</p><p id="AAPlayers">4</p>
+					<p class="statlabel">Latino</p><p id="latinoPlayers">12</p>
+					<p class="statlabel">Asian</p><p id="asianPlayers">2</p>
+					<p class="statlabel">Other</p><p id="otherPlayers">2</p>
+
+				<div class="line"></div>
+				<p class="statcat">International Players</p>
+					<p class="statlabel">Dominican Republic</p><p id="DRPlayers">6</p>
+					<p class="statlabel">Venezuela</p><p id="VZPlayers">2</p>
+
+				<div class="line"></div>
+				<p class="statcat">International Signing Bonus Pool</p>
+					<p class="statlabel">Pool</p> 
+					<p id="poolmoney">$4,983,500</p>
+			</div>
+	</div>
+	</div>
+</div>
+
+
+
+<!-- EMPTY DIV FOR CARD COMPARE -->
+<div class="cardcompare"></div>
+
+<!-- SELECT COMPARE TYPE -->
+<div class="compareTo">
+	<div class="head"><h1 class="select">COMPARE TO</h1></div>
+	<div class="optioncard" id="team">MLB TEAM</div>
+	<div class="optioncard" id="mlb">MLB</div>
+	<div class="optioncard" id="nhl">NHL</div>
+	<div class="optioncard" id="nfl">NFL</div>
+	<div class="optioncard" id="nba">NBA</div>
+	<div class="optioncard" id="usa">USA</div>
+	<div class="optioncard" id="city">USA CITY</div>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
